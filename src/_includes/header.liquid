@@ -1,0 +1,40 @@
+{%- assign author = site.author -%}
+<div class="identity">
+  {%- if author.avatar != "" %}
+  <a href="/" class="avatar-link"><img src="{{ author.avatar }}" alt="" class="avatar"></a>
+  {%- endif %}
+  <div>
+    <a href="/" class="author-name">{{ author.name }}</a>
+    {%- if author.job != "" %}
+    <span class="author-job">{{ author.job }}</span>
+    {%- endif %}
+    <span class="author-bio">{{ author.bio }}</span>
+  </div>
+</div>
+<nav class="site-nav" aria-label="Site">
+  <ul class="nav-list">
+    {%- for item in site.nav %}
+    <li class="nav-item"><a href="{{ item.url }}">{{ item.title }}</a></li>
+    {%- endfor %}
+  </ul>
+  <ul class="social-links">
+    {%- if author.email != "" %}
+    <li><a class="social-link-item" href="mailto:{{ author.email }}" title="Email">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm1 2.4V17h16V7.4l-8 5.3-8-5.3zM4.6 7l7.4 4.9L19.4 7H4.6z"/></svg>
+      <span class="visually-hidden">Email</span></a></li>
+    {%- endif %}
+    {%- if author.linkedin != "" %}
+    <li><a class="social-link-item" href="https://www.linkedin.com/in/{{ author.linkedin }}" title="LinkedIn">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.4 2H3.6A1.6 1.6 0 0 0 2 3.6v16.8A1.6 1.6 0 0 0 3.6 22h16.8a1.6 1.6 0 0 0 1.6-1.6V3.6A1.6 1.6 0 0 0 20.4 2zM8 19H5V9.5h3V19zM6.5 8.2a1.7 1.7 0 1 1 0-3.4 1.7 1.7 0 0 1 0 3.4zM19 19h-3v-4.6c0-1.1 0-2.5-1.5-2.5S12.7 13 12.7 14.3V19h-3V9.5h2.9v1.3h.1c.4-.8 1.4-1.5 2.8-1.5 3 0 3.5 2 3.5 4.5V19z"/></svg>
+      <span class="visually-hidden">LinkedIn</span></a></li>
+    {%- endif %}
+    {%- if author.github != "" %}
+    <li><a class="social-link-item" href="https://github.com/{{ author.github }}" title="GitHub">
+      <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+      <span class="visually-hidden">GitHub</span></a></li>
+    {%- endif %}
+    <li><a class="social-link-item" href="/feed.xml" title="RSS feed">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4a16 16 0 0 1 16 16h-3A13 13 0 0 0 4 7V4zm0 6a10 10 0 0 1 10 10h-3a7 7 0 0 0-7-7v-3zm2 6a2 2 0 1 1 0 4 2 2 0 0 1 0-4z"/></svg>
+      <span class="visually-hidden">RSS feed</span></a></li>
+  </ul>
+</nav>

@@ -1,4 +1,0 @@
-markdown: kramdown
-rouge: true
-permalink: /post/:title
-auto: true
