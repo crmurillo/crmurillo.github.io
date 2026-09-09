@@ -1,0 +1,26 @@
+---
+layout: layouts/base.liquid
+---
+<h1 class="visually-hidden">Posts</h1>
+{%- for post in collections.posts reversed %}
+{%- assign tags = post.data.tags | postTags %}
+<section class="post">
+  <header class="post-header">
+    <p class="post-meta">
+      <time class="post-date" datetime="{{ post.date | isoDate }}">{{ post.date | postDate }}</time>
+      {%- if tags.size > 0 %}
+      •
+      {%- for tag in tags %}
+      <a class="post-tag" href="/tags/#{{ tag | slugify }}">{{ tag }}</a>{% unless forloop.last %} <span>/</span>{% endunless %}
+      {%- endfor %}
+      {%- endif %}
+    </p>
+    <h2><a href="{{ post.url }}" class="post-title" title="{{ post.data.title | escape }}">{{ post.data.title }}</a></h2>
+  </header>
+  {%- if post.data.description %}
+  <div class="post-description">
+    <p>{{ post.data.description }}</p>
+  </div>
+  {%- endif %}
+</section>
+{%- endfor %}

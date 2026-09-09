@@ -1,0 +1,29 @@
+---
+layout: layouts/page.liquid
+title: Tags
+permalink: /tags/
+---
+{%- if collections.tagList.size == 0 %}
+<p>No tags yet.</p>
+{%- else %}
+<ul class="tag-cloud">
+  {%- for tag in collections.tagList %}
+  <li style="font-size: {{ tag.count | times: 100 | divided_by: collections.tagList.size | plus: 70 }}%">
+    <a class="post-tag" href="#{{ tag.name | slugify }}">{{ tag.name }}</a>
+  </li>
+  {%- endfor %}
+</ul>
+
+<div class="tag-list">
+  {%- for tag in collections.tagList %}
+  <div class="tag-group">
+    <h2 class="tag-group-title" id="{{ tag.name | slugify }}">{{ tag.name }}</h2>
+    {%- for post in collections[tag.name] reversed %}
+    <article class="tag-item">
+      <a class="tag-item-title" href="{{ post.url }}">{{ post.data.title }}</a>
+    </article>
+    {%- endfor %}
+  </div>
+  {%- endfor %}
+</div>
+{%- endif %}

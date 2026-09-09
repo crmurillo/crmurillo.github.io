@@ -1,0 +1,19 @@
+{
+  "name": "crmurillo.github.io",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Cristina Murillo · Blog",
+  "type": "module",
+  "scripts": {
+    "build": "eleventy",
+    "serve": "eleventy --serve",
+    "clean": "rm -rf _site"
+  },
+  "engines": {
+    "node": ">=20.10"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.6",
+    "@11ty/eleventy-plugin-rss": "^3.0.0"
+  }
+}

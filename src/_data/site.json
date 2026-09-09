@@ -1,0 +1,19 @@
+{
+  "title": "Cristina Murillo · Blog",
+  "description": "Notes on the work I do.",
+  "url": "https://crmurillo.github.io/",
+  "author": {
+    "name": "Cristina Murillo",
+    "job": "",
+    "bio": "Notes on the work I do.",
+    "avatar": "/images/profile-photo.jpg",
+    "email": "cmurillo-blog@pm.me",
+    "github": "crmurillo",
+    "linkedin": "murillocristina"
+  },
+  "nav": [
+    { "title": "home", "url": "/" },
+    { "title": "tags", "url": "/tags/" },
+    { "title": "archive", "url": "/archive/" }
+  ]
+}
