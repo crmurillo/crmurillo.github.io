@@ -17,6 +17,8 @@
   --name: #b8860b;
   --accent: #b8860b;
   --accent-light: #d09a1f;
+  --link: #8a5a00;
+  --link-hover: #b8860b;
   --rule: #ddd;
   --font-sans: "Source Sans 3", "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
   --font-mono: "Roboto Mono", "Courier New", monospace;
@@ -31,7 +33,7 @@
 
 html {
   font-family: var(--font-sans);
-  font-size: 93.75%; /* 15px at the browser default of 16px, but follows the reader's setting */
+  font-size: 100%; /* 16px at the browser default, but follows the reader's setting */
   line-height: 1.5;
   color: var(--text);
   -webkit-font-smoothing: antialiased;
@@ -44,13 +46,13 @@ body {
 }
 
 a {
-  color: var(--primary);
+  color: var(--link);
   text-decoration: none;
 }
 
 a:hover,
 a:focus {
-  color: var(--primary-light);
+  color: var(--link-hover);
 }
 
 h1, h2, h3, h4, h5, h6 {
