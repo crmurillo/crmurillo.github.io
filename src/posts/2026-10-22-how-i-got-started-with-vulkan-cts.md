@@ -2,7 +2,7 @@
 title: How I got started with Vulkan CTS
 description: How a tile-unit bug in the Vulkan Video Samples AV1 parser led to my first Vulkan CTS tests, and what I learned writing them.
 tags: [blog]
-draft: true
+draft: false
 ---
 
 This year I started working on Vulkan Video and the Vulkan Conformance Test Suite (CTS) as part of my role as a *multimedia developer* at [Igalia](https://www.igalia.com/). I'm also a member of the Khronos Vulkan Video Technical Subgroup (TSG), the group that develops the Vulkan Video extensions.
